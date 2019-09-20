@@ -1,0 +1,11 @@
+# directories
+data
+logs
+public/css
+public/font
+public/img
+public/js
+public/scss
+
+# files
+launch.json
