@@ -8,7 +8,8 @@
 
         <h1>Upload some data</h1>
 
-        <form action="/upload" class="border border-light p-5" enctype="multipart/form-data" method="POST">
+        <form action="<?php echo view()->url('upload'); ?>" class="border border-light p-5"
+              enctype="multipart/form-data" method="POST">
             <input type="hidden" name="MAX_FILE_SIZE" value="50000" />
 
             <div class="input-group">

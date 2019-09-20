@@ -26,7 +26,7 @@
             in your formula.
         </div>
 
-        <form action="/add-column" class="border border-light p-5" method="POST">
+        <form action="<?php echo view()->url('add-column'); ?>" class="border border-light p-5" method="POST">
             <div class="md-form form-lg">
                 <input type="text" id="colName" name="colName" class="form-control form-control-lg">
                 <label for="colName">Column name</label>
