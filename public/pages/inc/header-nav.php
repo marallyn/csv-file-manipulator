@@ -23,7 +23,8 @@
             </ul>
             <ul class="navbar-nav ml-auto nav-flex-icons">
                 <li class="nav-item">
-                    <a class="nav-link waves-effect waves-light">
+                    <a class="nav-link waves-effect waves-light"
+                       href="https://github.com/marallyn/csv-file-manipulator">
                         <i class="fab fa-github"></i>
                     </a>
                 </li>
