@@ -12,10 +12,10 @@
                     <a class="nav-link" href="<?php echo view()->url(''); ?>">Welcome</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="<?php echo view()->url('upload'); ?>">Upload</a>
+                    <a class="nav-link" href="<?php echo view()->url('upload'); ?>">Choose Data</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="<?php echo view()->url('data'); ?>">Data</a>
+                    <a class="nav-link" href="<?php echo view()->url('data'); ?>">View Data</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="<?php echo view()->url('add-column'); ?>">Add Column</a>
