@@ -69,7 +69,7 @@ class Pages
             // alright, lets check the ssession...
             $fileName = isset($_SESSION['dataFileName']) ? $_SESSION['dataFileName'] : '';
         } else {
-            $fileName = config('data_dir') . '/' . $fileName;
+            $fileName = config('dataDir') . '/' . $fileName;
         }
 
         if (is_file($fileName)) {
@@ -100,13 +100,13 @@ class Pages
     }
 
     /**
-     * Get an array of files in the data_dir
+     * Get an array of files in the dataDir
      *
      * @return array
      */
     private function getDataFiles() : array
     {
-        $dataDir = \config('data_dir');
+        $dataDir = \config('dataDir');
         $files = glob("$dataDir/*.csv");
         $files = array_map(function ($file) {
             return \basename($file);
@@ -142,7 +142,7 @@ class Pages
     public function upload()
     {
         try {
-            $fileUploadObj = new FileUpload(config('data_dir'));
+            $fileUploadObj = new FileUpload(config('dataDir'));
             $_SESSION['dataFileName'] = $fileUploadObj->uploadFileName();
         } catch (\Throwable $th) {
             return $this->handleError(

@@ -1,7 +1,7 @@
 <div class="container">
     <!--Navbar -->
     <nav class="mb-3 navbar navbar-expand-lg navbar-dark primary-color">
-        <span class="navbar-brand">CSV File Manipulator</span>
+        <span class="navbar-brand"><?php echo config('appName'); ?></span>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-333"
                 aria-controls="navbarSupportedContent-333" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>

@@ -17,8 +17,10 @@ $view = new View(dirname(__DIR__) . '/public/pages');
 $routes = new Routes($view);
 $request = new Request();
 
-$config = [];
-$config['data_dir'] = dirname(__DIR__) . '/data';
+$config = [
+    'appName' => 'CSV File Manipulator',
+    'dataDir' => dirname(__DIR__) . '/data'
+];
 
 if ($request->host() === 'redcat.local') {
     $view->setUrlBase('http://redcat.local');

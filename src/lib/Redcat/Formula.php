@@ -57,7 +57,8 @@ class Formula
             $token = $this->tokens[$i];
             if (in_array($token, $this->operators)) {
                 if ($operator !== '') {
-                    // if multiple operators in a row, we can ignore all bu the last one, but just for fun, let's throw an exception
+                    // if multiple operators in a row, we can ignore all but the last one,
+                    // but just for fun, let's throw an exception
                     throw new \Exception(
                         "Multiple operators in a row. This is not illegal, but it makes me question whether you know what you are doing.",
                         1
@@ -77,8 +78,14 @@ class Formula
             if ($value === null) {
                 // this is the first token, so just assign val to value
                 $value = $val;
+            } elseif ($operator === '') {
+                // we have an existing value, a val, but no operator. Let's call this an error
+                throw new \Exception(
+                    "You entered two columns or constants in a row with no operator between them. Do you understand how formulas work?",
+                    1
+                );
             } else {
-                // we have an existing value, a val, and hopefully an operator
+                // we have an existing value, a val, and an operator. Let's operate!
                 $value = $this->operate($value, $operator, $val);
 
                 // we used the operator, so forget it.
